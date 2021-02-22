@@ -19,6 +19,6 @@ export default class Sprite
     passo(dt)
     {
         this.x = this.x + this.vx * dt;
-        this.y = this.y + this.vx * dt;
+        this.y = this.y + this.vy * dt;
     }
 }

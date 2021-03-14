@@ -81,6 +81,7 @@ export default class Cena
                 if(spriteA.colidiuCom(spriteB))
                 {
                     this.quandoColidir(spriteA, spriteB);
+                    this.assets.play("boom");
                 }
             }
         }

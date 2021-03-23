@@ -1,7 +1,7 @@
 export default class Sprite
 {
     //Responsável por modelar algo que se move na tela
-    constructor({x = 100, y = 100, w = 20, h = 20, color = "white", vx = 0, vy = 0, controlar = () => {}} = {})
+    constructor({x = 100, y = 100, w = 20, h = 20, color = "white", vx = 0, vy = 0, controlar = () => {}, tags = []} = {})
     {
         this.x = x;
         this.y = y;
@@ -14,6 +14,10 @@ export default class Sprite
         this.mx = 0;
         this.my = 0;
         this.controlar = controlar;
+        this.tags = new Set();
+        tags.forEach((tag) => {
+            this.tags.add(tag);
+        });
     }
     desenhar(ctx)
     {
